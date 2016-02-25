@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     // --------------------------------------
-    // Watch Configuration
+    // watch Configuration
     // --------------------------------------
 
     watch: {
@@ -25,12 +25,12 @@ module.exports = function(grunt) {
     },
 
     // --------------------------------------
-    // Sass Configuration
+    // sass Configuration
     // --------------------------------------
 
     sass: {
       options: {
-        loadPath: ['bower_components/foundation/scss']
+        loadPath: ['develop/scss/vendor']
       },
       dist: {
         options: {
@@ -45,6 +45,17 @@ module.exports = function(grunt) {
           ext:    '.css'
         }]
       }
+    },
+
+    // --------------------------------------
+    // cssmin Configuration
+    // --------------------------------------
+
+    cssmin: {
+      minify: {
+        src: 'dist/assets/css/style.css',
+        dest: 'css/style.min.css'
+      }
     }
   });
 
@@ -53,12 +64,15 @@ module.exports = function(grunt) {
   // -----------------------------------------
 
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // -----------------------------------------
   // Register Grunt tasks
   // -----------------------------------------
 
-  grunt.registerTask('buildCss', ['sass']);
-  grunt.registerTask('watch', ['buildCss', 'watch']);
+  grunt.registerTask('buildCSS', ['sass', 'cssmin']);
+  grunt.registerTask('buildJS',  ['concat', 'uglify']);
   grunt.registerTask('default', ['buildCss']);
 };
