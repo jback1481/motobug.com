@@ -1,0 +1,20 @@
+{
+  "name": "motobug.com",
+  "description": "This application is my personal website, and playground for new things I want to fiddle with.",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Joel Back"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jback1481/motobug.com",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "foundation": "zurb/bower-foundation"
+  }
+}
