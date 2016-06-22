@@ -1,19 +1,8 @@
 {
-  "name": "motobug.com",
-  "version": "0.0.1",
-  "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-compass": "~0.7.0",
-    "grunt-contrib-jshint":  "~0.8.0",
-    "grunt-contrib-concat":  "~0.3.0",
-    "grunt-contrib-uglify":  "~0.2.7",
-    "grunt-contrib-watch":   "~0.5.3"
-  },
-  "description": "This application is my personal website, and playground for new things I want to fiddle with.",
+  "name": "local.motobug.com",
+  "version": "1.0.0",
+  "description": "My personal website",
   "main": "Gruntfile.js",
-  "dependencies": {
-    "bower": "^1.7.7"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,9 +11,12 @@
     "url": "git+https://github.com/jback1481/motobug.com.git"
   },
   "author": "Joel Back",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jback1481/motobug.com/issues"
   },
-  "homepage": "https://github.com/jback1481/motobug.com#readme"
+  "homepage": "https://github.com/jback1481/motobug.com#readme",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  }
 }
