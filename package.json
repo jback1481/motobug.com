@@ -4,8 +4,8 @@
   "description": "Package dependencies for my personal website",
   "author": "Joel Back <jwbabc@comcast.net>",
   "repository": {
-    "type": "git"
-    "url": "https://git@github.com:jback1481/motobug.com.git"
+    "type": "git",
+    "url": "git+ssh://git@github.com/jback1481/motobug.com.git"
   },
   "bugs": {
     "url": "https://git@github.com:jback1481/motobug.com.git/issues"
@@ -15,15 +15,21 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt": "^0.4.5",
     "grunt-contrib-concat": "~0.4.0",
-    "grunt-contrib-uglify": "~0.5.0"
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "~0.6.1"
   },
   "dependencies": {
     "grunt-contrib-watch": "^0.6.1",
     "jquery": "^3.0.0"
+  },
+  "homepage": "https://github.com/jback1481/motobug.com#readme",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

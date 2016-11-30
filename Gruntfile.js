@@ -1,4 +1,3 @@
-/*global module:false*/
 module.exports = function(grunt) {
 
   // Project configuration.
@@ -58,6 +57,42 @@ module.exports = function(grunt) {
     nodeunit: {
       files: ['test/**/*_test.js']
     },
+    sass: {
+      dev: {
+        options: {
+          sourcemap: 'none',
+          style: 'expanded',
+          loadPath: [
+            'bower_components/foundation/scss/'
+          ]
+        },
+        files: [{
+            expand: true,
+            cwd: 'css/',
+            src: ['**/**/main.scss'],
+            dest: 'css/src/css/',
+            flatten: true,
+            ext: '.css'
+        }]
+      },
+      prod: {
+        options: {
+          sourcemap: 'none',
+          style: 'compressed',
+          loadPath: [
+            'bower_components/foundation/scss'
+          ]
+        },
+        files: [{
+            expand: true,
+            cwd: 'css/',
+            src: ['**/**/main.scss'],
+            dest: 'css/dist/',
+            flatten: true,
+            ext: '.css'
+        }]
+      }
+    },
     watch: {
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
@@ -75,9 +110,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
   grunt.registerTask('default', ['concat']);
-
 };

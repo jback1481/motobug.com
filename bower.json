@@ -1,0 +1,21 @@
+{
+  "name": "motobug.com",
+  "description": "Package dependencies for my personal website",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Joel Back <jwbabc@comcast.net>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jback1481/motobug.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "^5.5.3"
+  }
+}
